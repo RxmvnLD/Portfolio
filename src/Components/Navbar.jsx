@@ -1,70 +1,86 @@
+/*THIS COMPONENT REQUIRES TAILWIND CSS & REACT-ICONS*/
+
 import React, { useState } from "react";
-import tw from "twin.macro";
-import { VscClose, VscMenu } from "react-icons/vsc";
+import { VscClose } from "react-icons/vsc";
 import { BiMenu } from "react-icons/bi";
+import tw from "twin.macro";
 
 const Navbar = () => {
+  const links = [
+    { text: "<Acerca de mi/>", link: "#" },
+    { text: "<Educación/>", link: "#" },
+    { text: "<Skills/>", link: "#" },
+    { text: "<Proyectos/>", link: "#" },
+  ];
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-gray-800 border-gray-200 sm:py-3">
-      <div className="container flex flex-wrap items-center justify-between sm:ml-10">
-        <span className="self-center px-2 text-2xl sm:text-3xl font-semibold text-white py-2.5 whitespace-nowrap">
-          RxmvnLD
-        </span>
-        <button
-          className="inline-flex items-center p-2 ml-3 text-3xl text-white rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 "
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
-          <div>
-            {isOpen ? (
-              <VscClose className="text-white" />
-            ) : (
-              <BiMenu className="text-white" />
-            )}
+    <>
+      <div className="sticky top-0 z-10 w-full">
+        <ResponsiveNavbar>
+          <div className="flex items-center text-2xl text-white cursor-pointer">
+            RxmvnLD
           </div>
-        </button>
 
-        <div
-          className={`w-full sm:-mr-60 md:block md:w-auto ${
-            isOpen ? "" : "hidden"
-          }`}
-        >
-          <ul className="flex flex-col items-center font-bold md:px-5 bg-gray-300/50 sm:bg-black/0 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 "
-              >
-                {"<About/>"}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 "
-              >
-                {"<Skills/>"}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 "
-              >
-                {"<Projects/>"}
-              </a>
-            </li>
+          <button
+            className="absolute inline-flex items-center p-2 ml-3 text-3xl text-white rounded-lg md:hidden focus:outline-none right-8 top-2 focus:ring-2 focus:ring-gray-200 "
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <div>
+              {isOpen ? (
+                <VscClose className="text-white" />
+              ) : (
+                <BiMenu className="text-white" />
+              )}
+            </div>
+          </button>
+
+          <ul
+            className={`md:flex md:items-center md:pb-0 md:static w-full md:w-auto md:pl-0 hidden`}
+          >
+            {links.map((el, index) => (
+              <li index={index} className=" md:ml-8 md:my-0">
+                <a
+                  href={el.link}
+                  className="font-mono text-lg text-white hover:text-gray-400"
+                >
+                  {el.text}
+                </a>
+              </li>
+            ))}
           </ul>
-        </div>
+        </ResponsiveNavbar>
       </div>
-    </nav>
+      <ul
+        className={`md:hidden pb-12 fixed bg-gray-600 z-5 left-0 w-full pl-9 transition-all duration-300 ease-in ${
+          isOpen ? "top-16 " : "top-[-520px]"
+        }`}
+      >
+        {links.map((el, index) => (
+          <li index={index} className="text-xl my-7">
+            <a
+              href={el.link}
+              className="font-mono text-white hover:text-gray-400"
+            >
+              {el.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 
-const MainContainer = tw.main`
-w-20 bg-black text-white
+const ResponsiveNavbar = tw.nav`
+items-center
+justify-between
+py-4
+md:py-6
+bg-gray-800
+md:flex
+md:px-10
+px-7
 `;
 
 export default Navbar;
