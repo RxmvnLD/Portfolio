@@ -4,5 +4,10 @@
 @import-normalize;
 
 :root {
-  @apply bg-[#101620] text-white text-base;
+  @apply bg-[#0a192f] text-gray-400 text-base scroll-smooth;
+}
+
+html,
+body {
+  width: 100%;
 }
