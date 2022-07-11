@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "rxmvmld"
-  }
+    "default": "rxmvmld",
+    "final-portfolio": "rxmvnld"
+  },
+  "targets": {}
 }

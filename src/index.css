@@ -4,7 +4,7 @@
 @import-normalize;
 
 :root {
-  @apply bg-[#0a192f] text-gray-400 text-base scroll-smooth;
+  @apply bg-gradient-to-b from-[#0a192f] to-[#03070e] text-gray-400 text-base scroll-smooth;
 }
 
 html,

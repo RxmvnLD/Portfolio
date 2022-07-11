@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 const Intro = () => {
   return (
     <section
-      className="relative flex flex-col justify-center min-h-screen -top-10 xl:-top-40 z-2 xl:scroll-mt-64 scroll-mt-10"
+      className="relative flex flex-col justify-center min-h-screen -top-10 xl:-top-40 xl:scroll-mt-64 scroll-mt-10"
       id="welcome"
     >
       <p className="font-mono text-teal-300 ">Hola, mi nombre es:</p>

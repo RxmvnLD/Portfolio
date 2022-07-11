@@ -1,6 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import { FiGithub, FiInstagram } from "react-icons/fi";
+import { GrTwitter } from "react-icons/gr";
 import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Asidebar = () => {
@@ -20,6 +21,13 @@ const Asidebar = () => {
           rel="noopener noreferrer"
         >
           <AiOutlineLinkedin className=" hover:text-purple-500" />
+        </a>
+        <a
+          href="https://twitter.com/RxmvnLD"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GrTwitter className=" hover:text-purple-500" />
         </a>
         <a
           href="https://www.instagram.com/rom.e.m.e/"

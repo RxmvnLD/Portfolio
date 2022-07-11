@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import { VscClose } from "react-icons/vsc";
 import { BiMenu } from "react-icons/bi";
-import { GrLinkedin, GrGithub, GrTwitter } from "react-icons/gr";
+import { FiGithub, FiInstagram } from "react-icons/fi";
+import { GrTwitter } from "react-icons/gr";
+import { AiOutlineLinkedin } from "react-icons/ai";
 import tw from "twin.macro";
 
 const Navbar = () => {
@@ -47,7 +49,7 @@ const Navbar = () => {
       </MainContainer>
 
       <ul
-        className={`md:hidden pb-12 fixed bg-[#102445] z-10 left-0 w-full pl-9 transition-all duration-300 ease-in ${
+        className={`md:hidden pb-12 fixed bg-gradient-to-b from-[#102445] to-[#122a52] z-40 left-0 w-full pl-9 transition-all duration-300 ease-in ${
           isOpen ? "top-16 " : "top-[-520px]"
         }`}
       >
@@ -64,7 +66,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <div className="flex flex-row items-center gap-2">
-                <GrGithub className="text-2xl" />
+                <FiGithub className="text-2xl" />
 
                 {"<Github/>"}
               </div>
@@ -77,7 +79,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <div className="flex flex-row items-center gap-2">
-                <GrLinkedin className="text-xl" /> {"<LinkedIn/>"}
+                <AiOutlineLinkedin className="text-2xl" /> {"<LinkedIn/>"}
               </div>
             </MenuLink>
           </MenuLi>
@@ -93,13 +95,25 @@ const Navbar = () => {
               </div>
             </MenuLink>
           </MenuLi>
+
+          <MenuLi>
+            <MenuLink
+              href="https://www.instagram.com/rom.e.m.e/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex flex-row items-center gap-2">
+                <FiInstagram /> {"<Instagram/>"}
+              </div>
+            </MenuLink>
+          </MenuLi>
         </IconsContainer>
       </ul>
     </>
   );
 };
 const MainContainer = tw.div`
-sticky top-0 z-20 w-full
+sticky top-0 z-50 w-full
 `;
 
 const ResponsiveNavbar = tw.nav`

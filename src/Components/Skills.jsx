@@ -6,7 +6,6 @@ import git from "../assets/skills/git.png";
 import github from "../assets/skills/github.png";
 import npm from "../assets/skills/npm.png";
 import react from "../assets/skills/react.png";
-import redux from "../assets/skills/redux.png";
 import router from "../assets/skills/router.png";
 import stripe from "../assets/skills/stripe.png";
 import tailwind from "../assets/skills/tailwind.png";
@@ -55,7 +54,7 @@ const Skills = () => {
           Estas son algunas tecnologías, librerías y/o habilidades que utilizo
           con frecuencia al desarrollar mis proyectos.
         </p>
-        <div className="grid justify-center w-full max-w-full gap-10 mt-5 md:grid-cols-4">
+        <div className="grid justify-center w-full max-w-full gap-10 mt-5 md:grid-cols-2 xl:grid-cols-4">
           <Skill
             logo={translate}
             title="Idioma inglés"
