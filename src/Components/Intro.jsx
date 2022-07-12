@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 const Intro = () => {
   return (
     <section
-      className="relative flex flex-col justify-center min-h-screen -top-10 xl:-top-40 xl:scroll-mt-64 scroll-mt-10"
+      className="relative flex flex-col justify-center min-h-screen px-2 -top-10 xl:-top-40 xl:scroll-mt-64 scroll-mt-10"
       id="welcome"
     >
       <p className="font-mono text-teal-300 ">Hola, mi nombre es:</p>
@@ -31,7 +31,7 @@ const Intro = () => {
         aprender ReactJS a profundidad.
       </p>
       <button className="px-5 py-1 font-mono text-lg font-semibold text-purple-500 border-2 border-purple-600 rounded-md w-max xl:px-8 xl:py-2">
-        Trabajemos juntos!
+        <a href="mailto:roman09071999@gmail.com">Trabajemos juntos!</a>
       </button>
     </section>
   );

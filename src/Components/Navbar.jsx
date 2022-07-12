@@ -49,8 +49,8 @@ const Navbar = () => {
       </MainContainer>
 
       <ul
-        className={`md:hidden pb-12 fixed bg-gradient-to-b from-[#102445] to-[#122a52] z-40 left-0 w-full pl-9 transition-all duration-300 ease-in ${
-          isOpen ? "top-16 " : "top-[-520px]"
+        className={`md:hidden w-screen pb-12 fixed bg-gradient-to-b from-[#102445] to-[#122a52] z-40  pl-9 transition-all duration-300 ease-in ${
+          isOpen ? "top-16 " : "top-[-550px]"
         }`}
       >
         {links.map((el, index) => (
@@ -117,7 +117,7 @@ sticky top-0 z-50 w-full
 `;
 
 const ResponsiveNavbar = tw.nav`
-items-center justify-between py-4 md:py-6 bg-[#0c1c35] md:flex md:px-10 px-7 shadow-xl
+items-center justify-between py-4 md:py-6 bg-[#0c1c35] md:flex md:px-10 px-7 shadow-xl w-full
 `;
 
 const NavTitle = tw.h1`

@@ -46,7 +46,7 @@ const Skills = () => {
   return (
     <>
       <section
-        className="relative w-full max-w-full mb-20 text-sm -top-18 lg:-top-20 xl:text-lg md:scroll-mt-40 scroll-mt-24"
+        className="relative w-full max-w-full px-2 mb-20 text-sm -top-18 lg:-top-20 xl:text-lg md:scroll-mt-40 scroll-mt-24"
         id="skills"
       >
         <NumberedHeading number={3} heading="Skills" />
@@ -76,8 +76,8 @@ const Skills = () => {
             text={
               <p>
                 Utilizo hooks para el manejo de estado (useState y useEffect) y
-                contexto (useContext) así como funciones reductoras (reducers y
-                useReducer).
+                contexto (useContext). Estoy practicando con Reducers en
+                aplicaciones cuyo estado se vuelve más complejo.
               </p>
             }
           />
@@ -99,7 +99,7 @@ const Skills = () => {
             text={
               <p>
                 He escrito mucho código desde que empecé a estudiar pero en mi
-                repositorio únicamente se encuentran mis aplicaciones más
+                repositorio únicamente se encuentran mis proyectos más
                 recientes.
               </p>
             }
@@ -130,7 +130,7 @@ const Skills = () => {
             title="NPM"
             text={
               <p>
-                Empecé trabajando con NPM pero actualmente estoy probando{" "}
+                Empecé trabajando con NPM y actualmente estoy probando{" "}
                 <a
                   href="https://cloud.google.com/products/"
                   target="_blank"
@@ -174,7 +174,7 @@ const Skills = () => {
             logoSize={20}
             text={
               <p>
-                Esta libraría combina los{" "}
+                Esta librería combina los{" "}
                 <a
                   href="https://styled-components.com"
                   target="_blank"

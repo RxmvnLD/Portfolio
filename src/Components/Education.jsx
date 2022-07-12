@@ -8,7 +8,7 @@ const Education = () => {
   return (
     <>
       <section
-        className="relative mb-20 text-sm -top-18 lg:-top-20 xl:text-lg md:scroll-mt-40 scroll-mt-24"
+        className="relative px-2 mb-20 text-sm -top-18 lg:-top-20 xl:text-lg md:scroll-mt-40 scroll-mt-24"
         id="education"
       >
         <NumberedHeading number="2" heading="Educación" sectionId="education" />

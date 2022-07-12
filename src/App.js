@@ -12,7 +12,7 @@ function App() {
       <div className="flex flex-row max-w-full">
         <Asidebar />
 
-        <main className="px-6 xl:p-0 xl:mx-96 xl:text-lg z-2">
+        <main className="w-full px-6 xl:p-0 xl:mx-96 xl:text-lg z-2">
           <Intro />
           <About />
           <Education />
